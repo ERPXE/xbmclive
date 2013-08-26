@@ -1,0 +1,13 @@
+MENU BEGIN XBMC
+MENU LABEL ^XBMC Live 10.1
+# ------====> Include Menu Settings <====------
+MENU INCLUDE er/menuinc/header.module
+
+# ------====> Set Specific Page Settings <====------
+MENU BACKGROUND er/plugins/xbmclive/xbmclive.png
+
+MENU INCLUDE er/plugins/xbmclive/xbmclivemain.menu
+  
+# ------====> Back <====------
+MENU INCLUDE er/menu/shared/menu-back.module
+MENU END

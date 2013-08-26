@@ -1,0 +1,17 @@
+LABEL XBMCLIVE
+MENU LABEL ^XBMC Live
+KERNEL er/plugins/xbmclive/vmlinuz
+INITRD er/plugins/xbmclive/initrd.img
+APPEND netboot=nfs nfsroot=10.0.0.1:/tftpboot/er/shares/xbmclive/ ramdisk_size=200000 ip=dhcp root=/dev/nfs usbcore.autosuspend=-1 video=vesafb boot=live xbmc=autostart,nodiskmount,noredir loglevel=0 quickreboot quickusbmodules notimezone noaccessibility noapparmor noaptcdrom noautologin noxautologin noconsolekeyboard nofastboot nognomepanel nohosts nokpersonalizer nolanguageselector nolocales nopowermanagement noprogramcrashes nojockey nosudo noupdatenotifier nouser nopolkitconf noxautoconfig noxscreensaver nopreseed union=aufs
+TEXT HELP
+                 XBMC Live.
+ENDTEXT
+
+LABEL XBMCLIVESAFE
+MENU LABEL ^XBMC Live Safe Mode
+KERNEL er/plugins/xbmclive/vmlinuz
+INITRD er/plugins/xbmclive/initrd.img 
+APPEND netboot=nfs nfsroot=10.0.0.1:/tftpboot/er/shares/xbmclive/ ramdisk_size=200000 ip=dhcp root=/dev/nfs username=xbmc password=xbmc usbcore.autosuspend=-1 video=normal boot=live xbmc=nodiskmount,noredir loglevel=0 quickreboot quickusbmodules notimezone noaccessibility noapparmor noaptcdrom noxautologin noconsolekeyboard nofastboot nognomepanel nohosts nokpersonalizer nolanguageselector nolocales nopowermanagement noprogramcrashes nojockey nosudo noupdatenotifier nopolkitconf noxautoconfig noxscreensaver nopreseed union=aufs
+TEXT HELP
+                 XBMC Live Safe Mode.
+ENDTEXT

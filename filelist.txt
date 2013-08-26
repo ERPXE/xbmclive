@@ -1,0 +1,6 @@
+.:
+filelist.txt
+initrd.img
+vmlinuz
+xbmclive.menu
+xbmclive.png
